@@ -1,0 +1,11 @@
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.AssemblyReference.cache
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.GenerateurDeJetons.resources
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.Properties.Resources.resources
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.GenerateResource.cache
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.CoreCompileInputs.cache
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\bin\Debug\ClientSideApp.exe.config
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\bin\Debug\ClientSideApp.exe
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\bin\Debug\ClientSideApp.pdb
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.exe
+C:\Users\Antoi\source\repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.pdb

@@ -10,11 +10,20 @@ using System.Windows.Forms;
 
 namespace ClientSideApp
 {
-    public partial class Form1 : Form
+    public partial class GenerateurDeJetons : Form
     {
-        public Form1()
+        public GenerateurDeJetons()
         {
             InitializeComponent();
+            Countdown();
+        }
+
+        private void Countdown()
+        {
+            for (int i = 0; i < 30; i++)
+            {
+                
+            }
         }
     }
 }
