@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Application serveur</title>
+    <style>
+      body {
+        font-size: 15px;
+        font-family: "Poppins", sans-serif;
+        background-color: #fafafa;
+      }
+      input {
+        padding: 6px;
+        font-size: 18px;
+        border-width: 2px;
+        border-color: #13218c;
+        background-color: #ffffff;
+        color: #484848;
+        border-style: solid;
+        border-radius: 6px;
+        box-shadow: 0px 0px 15px rgba(79, 94, 179, 0.75);
+        text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+        text-align: center;
+      }
+      input:focus {
+        outline: none;
+      }
+      footer {
+        font-size: 11px;
+        text-align: center;
+      }
+
+      @media (max-width: 400px) {
+        h1 {
+          font-size: 1.5rem;
+        }
+      }
+
+      .header {
+        text-align: center;
+        line-height: 0.8;
+        margin-bottom: 50px;
+        margin-top: 100px;
+      }
+
+      .header p {
+        margin: 0 auto;
+        line-height: 2;
+        color: rgba(79, 94, 179, 0.75);
+      }
+
+      .box p {
+        color: rgba(79, 94, 179, 0.75);
+      }
+
+      .box {
+        border-radius: 5px;
+        box-shadow: 0px 30px 40px -20px rgba(79, 94, 179, 0.75);
+        padding: 30px;
+        margin: 20px;
+      }
+
+      img {
+        float: right;
+      }
+
+      @media (max-width: 450px) {
+        .box {
+          height: 200px;
+        }
+      }
+
+      @media (max-width: 950px) and (min-width: 450px) {
+        .box {
+          text-align: center;
+          height: 180px;
+        }
+      }
+
+      @media (min-width: 950px) {
+        .row {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .box {
+          width: 25%;
+          border-top: 3px solid #13218c;
+        }
+        .header p {
+          width: 30%;
+        }
+
+        .button {
+          background-color: #2d3caa;
+          display: inline-block;
+          cursor: pointer;
+          color: #ffffff;
+          font-size: 18px;
+          padding: 10px 24px;
+          text-decoration: none;
+          border-style: solid;
+          border-color: #13218c;
+          border-radius: 16px;
+          box-shadow: 0px 0px 15px rgba(79, 94, 179, 0.75);
+          text-shadow: 0px 0px 5px rgba(66, 66, 66, 0.75);
+          text-align: center;
+        }
+        .button:hover {
+          background-color: rgba(79, 94, 179, 0.75);
+        }
+        .button:active {
+          position: relative;
+          top: 1px;
+        }
+      }
+    </style>
+  </head>
+  <body onload="setInterval(fetchKeys, 1000)">
+    <div class="header">
+      <h1>Validateur de jetons d'authentification</h1>
+      <h1>Application serveur</h1>
+
+      <p>
+        Entrez simplement votre code généré par l'application client, nous
+        allons vérifier sa validité.
+      </p>
+    </div>
+    <div class="row">
+      <div class="box">
+        <h2>Validateur</h2>
+        <p>Clé actuelle (debug) : <span id="key"></span></p>
+        <input
+          id="keyInput"
+          type="text"
+          maxlength="8"
+          onkeypress="return validateInput(event)"
+        />
+        <br /><br />
+        <a href="#" class="button" onclick="validateKey()" id="button"
+          >Valider</a
+        >
+        <br />
+        <br />
+        <div id="response"></div>
+      </div>
+    </div>
+    <footer>
+      <p>Créé par Charles Bisaillon, Élizabeth Nadeau, Antoine Rioux</p>
+    </footer>
+  </body>
+
+  <script>
+    var fail = 0;
+
+    function validateInput(event) {
+      var charCode = event.which ? event.which : event.keyCode;
+      if (charCode > 31 && (charCode < 48 || charCode > 57)) return false;
+      return true;
+    }
+
+    function fetchKeys() {
+      fetch("/api/keys", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          document.getElementById("key").innerHTML = data.key;
+        });
+    }
+
+    function validateKey() {
+      fetch("/api/data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          inputValue: document.getElementById("keyInput").value,
+        }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          document.getElementById("response").innerHTML = data.message;
+          document.getElementById("response").style.color = data.color;
+        });
+    }
+  </script>
+</html>
