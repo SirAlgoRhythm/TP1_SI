@@ -12,6 +12,14 @@ namespace ClientSideApp.CustomTools
 {
     public partial class ProgressBarWithText : ProgressBar
     {
+        private int secondes;
+
+        public int Secondes
+        {
+            get { return secondes; }
+            set { secondes = value; Invalidate(); }
+        }
+
         public ProgressBarWithText()
         {
             InitializeComponent();
@@ -31,7 +39,7 @@ namespace ClientSideApp.CustomTools
 
             using (SolidBrush brush = new SolidBrush(ForeColor))
             {
-                e.Graphics.DrawString(Value.ToString() + " secondes restantes", Font, brush,
+                e.Graphics.DrawString(Secondes.ToString() + " secondes restantes", Font, brush,
                     this.ClientRectangle, new StringFormat() { Alignment = StringAlignment.Center, LineAlignment = StringAlignment.Center });
             }
         }

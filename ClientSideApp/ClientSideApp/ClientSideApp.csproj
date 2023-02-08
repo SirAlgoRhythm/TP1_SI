@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compteur.cs" />
     <Compile Include="CustomTools\ProgressBarWithText.cs">
       <SubType>Component</SubType>
     </Compile>

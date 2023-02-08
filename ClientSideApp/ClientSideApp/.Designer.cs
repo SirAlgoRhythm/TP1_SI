@@ -32,6 +32,7 @@
             this.lbl_TitreJeton = new System.Windows.Forms.Label();
             this.lbl_JetonGenere = new System.Windows.Forms.Label();
             this.progressBarWithText1 = new ClientSideApp.CustomTools.ProgressBarWithText(this.components);
+            this.monTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbl_TitreJeton
@@ -61,9 +62,15 @@
             this.progressBarWithText1.MarqueeAnimationSpeed = 1000;
             this.progressBarWithText1.Maximum = 60;
             this.progressBarWithText1.Name = "progressBarWithText1";
+            this.progressBarWithText1.Secondes = 0;
             this.progressBarWithText1.Size = new System.Drawing.Size(571, 61);
             this.progressBarWithText1.Step = 1;
             this.progressBarWithText1.TabIndex = 3;
+            // 
+            // monTimer
+            // 
+            this.monTimer.Enabled = true;
+            this.monTimer.Interval = 1000;
             // 
             // GenerateurDeJetons
             // 
@@ -76,6 +83,7 @@
             this.Controls.Add(this.lbl_TitreJeton);
             this.Name = "GenerateurDeJetons";
             this.Text = "Generateur de jetons";
+            this.Shown += new System.EventHandler(this.GenerateurDeJetons_Shown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -85,6 +93,7 @@
         private System.Windows.Forms.Label lbl_TitreJeton;
         private System.Windows.Forms.Label lbl_JetonGenere;
         private CustomTools.ProgressBarWithText progressBarWithText1;
+        private System.Windows.Forms.Timer monTimer;
     }
 }
 
