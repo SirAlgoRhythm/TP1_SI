@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClientSideApp.CustomTools;
+using System;
 using System.Runtime.Remoting.Lifetime;
 using System.Windows.Forms;
 
@@ -11,10 +12,29 @@ namespace ClientSideApp
 
         private Timer _timer;
 
-        public Compteur(int SecondesRestantes, Timer monTimer)
+        private ProgressBarWithText _progressBar;
+
+        private Label lblDuCompteur;
+
+        public Compteur(int SecondesRestantes, Timer monTimer, ProgressBarWithText progressBarWithText, Label lblCompteur)
         {
             this.SecondesRestantes = SecondesRestantes;
             this._timer = monTimer;
+            _timer.Tick += _timer_Tick;
+            _progressBar = progressBarWithText;
+            lblDuCompteur = lblCompteur;
+        }
+
+        public void _timer_Tick(object sender, EventArgs e)
+        {
+            SecondesRestantes--;
+            if (SecondesRestantes == 0)
+            {
+                //générer une nouvelle clée
+                SecondesRestantes = 60;
+            }
+            lblDuCompteur.Text = SecondesRestantes.ToString();
+            _progressBar.Secondes = SecondesRestantes; //donne la seconde qui doit être afficher sur le progressBar    
         }
 
         public void StartTimer()
