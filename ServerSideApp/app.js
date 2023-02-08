@@ -13,7 +13,7 @@ function getKey() {
   }
 
   hash = hash * (hash % 13);
-  hash = hash.split("").reverse().join("");
+  hash = hash.toString().split("").reverse().join("");
   return hash.toString().substring(0, 8);
 }
 
@@ -26,7 +26,7 @@ function getOldKey() {
   }
 
   hash = hash * (hash % 13);
-  hash = hash.split("").reverse().join("");
+  hash = hash.toString().split("").reverse().join("");
   return hash.toString().substring(0, 8);
 }
 
