@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlgoritmeJeton.cs" />
     <Compile Include="Compteur.cs" />
     <Compile Include="CustomTools\ProgressBarWithText.cs">
       <SubType>Component</SubType>
