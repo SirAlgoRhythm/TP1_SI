@@ -13,6 +13,7 @@ function getKey() {
   }
 
   hash = hash * (hash % 13);
+  hash = hash.split("").reverse().join("");
   return hash.toString().substring(0, 8);
 }
 
@@ -24,8 +25,9 @@ function getOldKey() {
     hash += key.charCodeAt(i);
   }
 
-  //hash = hash * (hash % 13);
-  return hash.toString().substring(2, 10);
+  hash = hash * (hash % 13);
+  hash = hash.split("").reverse().join("");
+  return hash.toString().substring(0, 8);
 }
 
 const server = http.createServer((req, res) => {
