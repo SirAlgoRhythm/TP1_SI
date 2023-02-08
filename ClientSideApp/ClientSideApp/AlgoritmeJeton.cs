@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace ClientSideApp
 {
-	internal class AlgoritmeJeton
+	public class AlgoritmeJeton
 	{
-		static string GenererJeton()
+		public static string GenererJeton()
 		{
-			string key = Math.Round((double)(DateTime.Now.Ticks) / 60 / 1000).ToString();
+            DateTime origine = new DateTime(1970,1,1);
+            TimeSpan span = DateTime.Now - origine; 
+            Double nbSecondes = (Double) span.TotalMilliseconds;
+			string key = Math.Round(nbSecondes / 60 / 1000).ToString();
 			string hash = "";
 			ulong numberHash = 0;
 
-			for (int i = 0; i < 5; i++)
+			for (int i = 0; i < key.Length; i++)
 			{
 				ulong temp = (ulong)key[i];
 				if (i < 1) { numberHash = temp; }
@@ -24,7 +27,7 @@ namespace ClientSideApp
 			hash = (numberHash * (numberHash % 13)).ToString();
 
 			hash.ToCharArray().Reverse();
-			return hash.Substring(0, 8);
+			return hash.Substring(9);
 		}
 	}
 }

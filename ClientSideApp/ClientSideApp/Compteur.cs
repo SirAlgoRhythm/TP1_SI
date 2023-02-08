@@ -15,14 +15,16 @@ namespace ClientSideApp
         private ProgressBarWithText _progressBar;
 
         private Label lblDuCompteur;
+        private Label lblDuJeton;
 
-        public Compteur(int SecondesRestantes, Timer monTimer, ProgressBarWithText progressBarWithText, Label lblCompteur)
+        public Compteur(int SecondesRestantes, Timer monTimer, ProgressBarWithText progressBarWithText, Label lblCompteur, Label lbl_jeton)
         {
             this.SecondesRestantes = SecondesRestantes;
             this._timer = monTimer;
             _timer.Tick += _timer_Tick;
             _progressBar = progressBarWithText;
             lblDuCompteur = lblCompteur;
+            lblDuJeton = lbl_jeton;
         }
 
         public void _timer_Tick(object sender, EventArgs e)
@@ -31,6 +33,7 @@ namespace ClientSideApp
             if (SecondesRestantes == 0)
             {
                 //générer une nouvelle clée
+                lblDuJeton.Text = AlgoritmeJeton.GenererJeton();
                 SecondesRestantes = 60;
             }
             lblDuCompteur.Text = SecondesRestantes.ToString();

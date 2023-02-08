@@ -17,7 +17,7 @@ namespace ClientSideApp
         public GenerateurDeJetons()
         {
             InitializeComponent();
-            monChrono = new Compteur(60 - DateTime.Now.Second, monTimer, progressBarWithText1, lbl_compteur); // donne le nombre de secondes restantes à la minute qui s'écoule actuellement et mon Timer winforms
+            monChrono = new Compteur(60 - DateTime.Now.Second, monTimer, progressBarWithText1, lbl_compteur, lbl_JetonGenere); // donne le nombre de secondes restantes à la minute qui s'écoule actuellement et mon Timer winforms
         }
 
         private void GenerateurDeJetons_Shown(object sender, EventArgs e)
@@ -28,6 +28,7 @@ namespace ClientSideApp
         private void Countdown()
         {
             monChrono.StartTimer();
+            lbl_JetonGenere.Text = AlgoritmeJeton.GenererJeton();
         }
 
     }
