@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClientSideApp
 {
-	public class AlgoritmeJeton
+	public static class AlgoritmeJeton
 	{
 		public static string GenererJeton()
 		{
@@ -26,8 +26,16 @@ namespace ClientSideApp
 
 			hash = (numberHash * (numberHash % 13)).ToString();
 
-			hash.ToCharArray().Reverse();
-			return hash.Substring(9);
+			hash = ReverseString(hash);
+			return hash.Substring(0,8);
+		}
+
+		private static string ReverseString(string str)
+		{
+			char[] strArray = str.ToCharArray();
+            Array.Reverse(strArray);
+            string reversedStr = new string(strArray);
+            return reversedStr;
 		}
 	}
 }
