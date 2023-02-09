@@ -20,3 +20,14 @@ C:\Users\Élizabeth Nadeau\Source\Repos\TP1_SI\ClientSideApp\ClientSideApp\obj\D
 C:\Users\Élizabeth Nadeau\Source\Repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.CoreCompileInputs.cache
 C:\Users\Élizabeth Nadeau\Source\Repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.exe
 C:\Users\Élizabeth Nadeau\Source\Repos\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.pdb
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\bin\Debug\ClientSideApp.exe.config
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\bin\Debug\ClientSideApp.exe
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\bin\Debug\ClientSideApp.pdb
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.AssemblyReference.cache
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.GenerateurDeJetons.resources
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.Properties.Resources.resources
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.GenerateResource.cache
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.csproj.CoreCompileInputs.cache
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.exe
+C:\Users\cfbis\OneDrive\Documents\École\cyberSecurite\tp1\TP1_SI\ClientSideApp\ClientSideApp\obj\Debug\ClientSideApp.pdb

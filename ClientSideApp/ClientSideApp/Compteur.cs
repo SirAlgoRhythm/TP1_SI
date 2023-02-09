@@ -33,7 +33,7 @@ namespace ClientSideApp
             if (SecondesRestantes == 0)
             {
                 //générer une nouvelle clée
-                lblDuJeton.Text = AlgoritmeJeton.GenererJeton();
+                lblDuJeton.Text = AlgoritmeJeton.getKey();
                 SecondesRestantes = 60;
             }
             lblDuCompteur.Text = SecondesRestantes.ToString();

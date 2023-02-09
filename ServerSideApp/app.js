@@ -6,13 +6,11 @@ var fail = 0;
 
 function getKey() {
   let key = Math.round(new Date().valueOf() / 60 / 1000).toString();
-  console.log(key)
   let hash = "";
 
   for (let i = 0; i < key.length; i++) {
     hash += key.charCodeAt(i);
   }
-console.log(hash)
   hash = hash * (hash % 13);
   hash = hash.toString().split("").reverse().join("");
   return hash.toString().substring(0, 8);

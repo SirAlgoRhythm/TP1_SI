@@ -28,7 +28,7 @@ namespace ClientSideApp
         private void Countdown()
         {
             monChrono.StartTimer();
-            lbl_JetonGenere.Text = AlgoritmeJeton.GenererJeton();
+            lbl_JetonGenere.Text = AlgoritmeJeton.getKey();
         }
 
     }
